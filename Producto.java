@@ -17,13 +17,25 @@ public class Productos {
     private String numSerie;
     private String marca;
     private int cantidad;
+    private int precio;
 
-    public Productos(String nombre, String numSerie, String marca, int cantidad) {
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public Productos(String nombre, String numSerie, String marca, int cantidad, int precio) {
         this.nombre = nombre;
         this.numSerie = numSerie;
         this.marca = marca;
         this.cantidad = cantidad;
+        this.precio = precio;
     }
+
+
 
     public int getCantidad() {
         return cantidad;
@@ -56,7 +68,8 @@ public class Productos {
     public void setMarca(String marca) {
         this.marca = marca;
     }
-
+    
+    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
